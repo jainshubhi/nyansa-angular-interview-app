@@ -18,4 +18,4 @@ angular.module('filters.formatting', [])
       else
         return (bytes / Math.pow(1024, i)).toFixed(2) + ' ' + sizes[i];
     }
-	}])
+	}]);

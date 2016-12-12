@@ -1,3 +1,8 @@
+<top-devices sort-by="cpuPct" name="CPU"></top-devices>
+<top-devices sort-by="memBytes" name="Mem" has-bytes=true></top-devices>
+<top-devices sort-by="networkRxBytes" name="RX" has-bytes=true></top-devices>
+<top-devices sort-by="networkTxBytes" name="TX" has-bytes=true></top-devices>
+
 <h4>Devices</h4>
 
 <table class="table table-bordered table-condensed table-striped table-hover">
@@ -14,7 +19,7 @@
     <tbody>
     <tr ng-repeat="device in devices">
         <td>{{ device.ip}}</td>
-        <td>{{ device.owner}}</td>
+        <td editable-text="device.owner">{{ device.owner || "" }}</td>
         <td>{{ device.cpuPct}}%</td>
         <td>{{ device.memBytes | bytesToStr }}</td>
         <td>{{ device.networkRxBytes | bytesToStr }}</td>
